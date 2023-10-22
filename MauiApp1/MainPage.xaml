@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+
+    <ScrollView>
+        <ScrollView>
+            <Grid Padding="20"
+              RowSpacing="10"
+              RowDefinitions="Auto, Auto, *">
+
+                <HorizontalStackLayout Spacing="10"
+                                   HorizontalOptions="Center"
+                                   Grid.Row="0">
+
+                    <Label Text="Vertical"/>
+
+                    <Button Text="Start"
+                        Clicked="onVerticalStart"/>
+                    <Button Text="Center"
+                        Clicked="onVerticalCenter"/>
+                    <Button Text="End"
+                        Clicked="onVerticalEnd"/>
+
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10"
+                                   HorizontalOptions="Center"
+                                   Grid.Row="1">
+
+                    <Label Text="Horizontal"/>
+                    <Button Text="Start"
+                        Clicked="onHorizontalStart"/>
+                    <Button Text="Center"
+                        Clicked="onHorizontalCenter"/>
+                    <Button Text="End"
+                        Clicked="onHorizontalEnd"/>
+                </HorizontalStackLayout>
+
+                <Image x:Name="target"
+                           Grid.Row="2"
+                           HeightRequest="200"
+                           WidthRequest="200"
+                           Source="gojoded.png"/>
+            </Grid>
+        </ScrollView>
+    </ScrollView>
+
+</ContentPage>
